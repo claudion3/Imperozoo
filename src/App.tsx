@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+//Screens
+import { AdminScreen } from './screens/Admin';
+import { AnimalsScreen } from './screens/Animals';
+import { HomeScreen } from './screens/Home';
+//Components
+import Navbar from './components/Navbar/Navbar';
+import SideDrawer from './components/SideDrawer/SideDrawer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+/**
+ * @module App/Project
+ * @category App
+ */
+
+/**
+ * Project App where routing is set up for project.
+ *
+ * @component
+ * @category App
+ * @subcategory Project
+ * @hideConstructor
+ */
+
+const App: React.FC = () => {
+	const [sideToggle, setSideToggle] = useState<boolean>(false);
+	console.log('see', sideToggle);
+	return (
+		<Router>
+			<Navbar click={() => setSideToggle(true)} />
+			<SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
+
+			<main>
+				<Switch>
+					<Route exact path='/' component={HomeScreen}></Route>
+					<Route exact path='/animals/:id' component={AnimalsScreen}></Route>
+					<Route exact path='/admin' component={AdminScreen}></Route>
+				</Switch>
+			</main>
+		</Router>
+	);
+};
 
 export default App;
