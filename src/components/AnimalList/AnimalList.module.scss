@@ -1,0 +1,16 @@
+.animal_list {
+	display: flex;
+	width: 100%;
+	justify-content: start;
+	justify-items: stretch;
+	place-content: stretch;
+	flex-wrap: wrap;
+	gap: 2rem;
+	padding: 2.5rem;
+}
+
+@media (min-width: 768px) {
+	.animal_list {
+		padding-right: 6rem;
+	}
+}

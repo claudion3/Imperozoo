@@ -1,0 +1,70 @@
+.wrapper {
+	width: 100%;
+	border: 2px solid rgba(156, 163, 175, 1);
+	flex-grow: 1;
+}
+.profile_image {
+	display: flex;
+	flex-direction: column;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	padding: 1.25rem;
+	border-color: rgba(156, 163, 175, 1);
+}
+
+.image {
+	border-radius: 99%;
+	width: 8rem;
+	height: 8rem;
+	object-fit: cover;
+}
+.animal_name {
+	color: rgba(255, 255, 255, 1);
+	font-weight: 500;
+	font-size: 1.5rem;
+	margin-top: 0.75rem;
+	margin-bottom: 0px;
+}
+.animal_bread {
+	color: rgba(255, 255, 255, 1);
+	font-weight: 400;
+	font-size: 0.875rem;
+}
+
+.info {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-rows: repeat(3, minmax(0, 1fr));
+	padding: 1.25rem;
+	column-gap: 0.25rem;
+	row-gap: 1.25rem;
+}
+.animal_info {
+	width: 100%;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	text-transform: uppercase;
+	color: rgba(156, 163, 175, 1);
+	font-weight: 700;
+	padding: 0.25rem;
+}
+.animal_info_data {
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	line-height: 1.25;
+	font-weight: 600;
+}
+
+@media (min-width: 768px) {
+	.wrapper {
+		min-width: 33.333333%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.wrapper {
+		width: 25%;
+	}
+}
