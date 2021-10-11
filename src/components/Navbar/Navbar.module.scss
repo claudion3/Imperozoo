@@ -59,8 +59,9 @@
 	.navbar {
 		justify-content: space-between;
 	}
-	.navbar_links {
-		display: none;
+	.navbar > a {
+		font-size: 0.8rem;
+		font-weight: bold;
 	}
 	.hamburger_menu {
 		display: flex;
@@ -70,6 +71,10 @@
 @media (max-width: 500px) {
 	.navbar {
 		justify-content: space-between;
+	}
+	.navbar > a {
+		font-size: 0.6rem;
+		font-weight: bold;
 	}
 	.navbar_logo h2 {
 		font-size: 1rem;

@@ -54,20 +54,24 @@ export class AdminTable extends Component<AdminTableProps, AdminTableState> {
 					title: 'Breed',
 					dataIndex: 'breed',
 					key: 'breed',
+					responsive: ['sm'],
 				},
 				{
 					title: 'Age',
 					dataIndex: 'age',
 					key: 'age',
+					responsive: ['sm'],
 				},
 				{
 					title: 'Status',
 					dataIndex: 'status',
 					key: 'status',
+					responsive: ['sm'],
 				},
 				{
 					title: '',
 					key: 'action',
+
 					render: () => (
 						<Space>
 							<Button onClick={this.props.adoptHandler}>Adopt</Button>
@@ -86,6 +90,7 @@ export class AdminTable extends Component<AdminTableProps, AdminTableState> {
 					{`
             .ant-table-content {
                 border: 1px solid #333;
+                
             }
             .ant-table-thead .ant-table-cell {
                 background: #000;
@@ -95,8 +100,9 @@ export class AdminTable extends Component<AdminTableProps, AdminTableState> {
             }
             .ant-table-tbody > tr > td {
                 border-bottom: 1px solid #ccc;
-                padding: 0.6rem 1rem;
+                padding: 0.7rem 0.9rem;
             }
+            
         `}
 				</style>
 				<Table
